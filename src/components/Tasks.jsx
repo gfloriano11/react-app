@@ -1,11 +1,13 @@
 function Tasks(props){
     return (
         <div>
-            <h2>
+            <ul className="space-y-3">
                 {props.tasks.map((task) => (
-                    <p>{task.title}</p>
+                    <li key={task.div} className="bg-slate-400 text-white p-2 rounded-xl">
+                        {task.title}
+                    </li>
                 ))}
-            </h2>
+            </ul>
         </div>
     );
 }
