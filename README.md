@@ -1,2 +1,3 @@
 # react-app
-this repository is to start my study with react framework, build by facebook (meta)
+
+unfortunally, I made a mistake, and delete my repositories about react, so I lost my progress (though, it wasn't so far, but i lost my commits 😅)
