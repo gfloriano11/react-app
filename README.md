@@ -1,3 +1,11 @@
-# react-app
+unfortunally, i made a mistake and delete my react repositories, so, i lost commits in github
+though, i dont make so far progress.
 
-unfortunally, I made a mistake, and delete my repositories about react, so I lost my progress (though, it wasn't so far, but i lost my commits 😅)
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
