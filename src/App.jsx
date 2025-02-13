@@ -23,7 +23,7 @@ function App(){
   }
 ])
 
-  function clickTask(taskId){
+  function checkTask(taskId){
     const newTasks = tasks.map(task => {
       if(task.id === taskId){
         return {...task, isComplete: !task.isComplete };
@@ -45,7 +45,7 @@ function App(){
       <div className="w-[500px] space-y-4">
         <h1 className="text-3xl text-slate-100 font-bold text-center">Tasks Management</h1>
         <AddTask/>
-        <Tasks tasks={tasks} clickTask={clickTask} deleteTask={deleteTask}/>
+        <Tasks tasks={tasks} checkTask={checkTask} deleteTask={deleteTask}/>
       </div>
     </div>
   );
