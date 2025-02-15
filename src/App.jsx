@@ -36,7 +36,7 @@ function App(){
 
   function submitTask(title, description){
     const newTask = {
-      id: 4,
+      id: tasks.length + 1,
       title: title,
       description: description,
       isComplete: false
