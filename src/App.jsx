@@ -34,7 +34,7 @@ function App(){
     setTasks(newTasks);
   }
 
-  function addTask(title, description){
+  function submitTask(title, description){
     const newTask = {
       id: 4,
       title: title,
@@ -42,7 +42,7 @@ function App(){
       isComplete: false
     }
 
-    setTasks(...tasks, newTask);
+    setTasks([...tasks, newTask]);
   }
 
   function deleteTask(taskId){
@@ -55,7 +55,7 @@ function App(){
     <div className="w-screen h-screen bg-slate-500 flex justify-center p-6">
       <div className="w-[500px] space-y-4">
         <h1 className="text-3xl text-slate-100 font-bold text-center">Tasks Management</h1>
-        <AddTask addTask={addTask}/>
+        <AddTask submitTask={submitTask}/>
         <Tasks tasks={tasks} checkTask={checkTask} deleteTask={deleteTask}/>
       </div>
     </div>
