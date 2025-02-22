@@ -1,6 +1,8 @@
 function Task(){
     return(
-        <p>Task!</p>
+        <div>
+            <h1>Task</h1>
+        </div>
     );
 }
 
