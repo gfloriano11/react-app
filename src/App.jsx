@@ -1,27 +1,9 @@
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App(){
-  const [tasks, setTasks] = useState([{
-    id: 1,
-    title: 'Estudar base React JS',
-    description: 'Estudo para aprender a mexer com react js e seus fundamentos',
-    isComplete: false
-  },
-  {
-    id: 2,
-    title: 'Estudar base TailwindCSS',
-    description: 'Estudo para aprender a mexer com TailwindCSS e seus fundamentos junto com react',
-    isComplete: false
-  },
-  {
-    id: 3,
-    title: 'Projeto com React JS e TailwindCSS',
-    description: 'Projeto próprio para por em prática os estudos de react js com o tailwind.',
-    isComplete: false
-  }
-])
+  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem('tasks')) || []);
 
   function checkTask(taskId){
     const newTasks = tasks.map(task => {
@@ -50,6 +32,10 @@ function App(){
   
   setTasks(newTasks)
   }
+  
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
 
   return (
     <div className="w-screen h-screen bg-slate-500 flex justify-center p-6">
