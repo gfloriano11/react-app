@@ -12,9 +12,9 @@ function Task(){
                 <div className="w-[500px] space-y-4">
                     <h1 className="text-3xl text-slate-100 font-bold text-center">Task Details</h1>
 
-                    <div className="bg-slate-400 p-4 rounded-md">
-                        <h2 className="text-xl text-white font-bold">{title}</h2>
-                        <p className="text-white">{description}</p>
+                    <div className="bg-slate-200 p-4 rounded-md">
+                        <h2 className="text-xl font-bold text-slate-600">{title}</h2>
+                        <p className="text-slate-600">{description}</p>
                     </div>
                 </div>
             </div>
