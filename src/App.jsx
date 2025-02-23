@@ -1,5 +1,6 @@
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
+import Title from "./components/Title";
 import { useEffect, useState } from "react";
 
 function App(){
@@ -52,7 +53,8 @@ function App(){
   return (
     <div className="w-screen h-screen bg-slate-500 flex justify-center p-6">
       <div className="w-[500px] space-y-4">
-        <h1 className="text-3xl text-slate-100 font-bold text-center">Tasks Management</h1>
+        {/* <h1 className="text-3xl text-slate-100 font-bold text-center">Tasks Management</h1> */}
+        <Title>Tasks Management</Title>
         <AddTask submitTask={submitTask}/>
         <Tasks tasks={tasks} checkTask={checkTask} deleteTask={deleteTask}/>
       </div>
