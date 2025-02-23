@@ -34,8 +34,20 @@ function App(){
   }
   
   useEffect(() => {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-  }, [tasks]);
+    // localStorage.setItem('tasks', JSON.stringify(tasks));
+
+    async function getTasks(){
+      const response = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=10', {
+        method: 'GET'
+      });
+      const data = await response.json();
+      console.log(data);
+
+      setTasks(data);
+    }
+
+    getTasks()
+  }, []);
 
   return (
     <div className="w-screen h-screen bg-slate-500 flex justify-center p-6">
